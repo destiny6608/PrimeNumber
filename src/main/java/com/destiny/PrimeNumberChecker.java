@@ -17,8 +17,11 @@ public class PrimeNumberChecker {
            // int method1Iterations = findFactorsMethod1(number);
             
             PrimeResult result = checkPrimeMethod1(number);
+            PrimeResult result2 = checkPrimeMethod2(number);
+            
             boolean isPrime = result.isPrime();
             int method1Iterations = result.getIterations();
+            int method2Iterations = result2.getIterations();
             
             if (isPrime){
                 System.out.println(number + " is a prime number.");
@@ -32,7 +35,10 @@ public class PrimeNumberChecker {
                 System.out.println();
             }
 
-            System.out.println("Number of iterations with Method I: " + method1Iterations);
+            System.out.println("With 1st method number of iteration is: " 
+            + method1Iterations);
+            System.out.println("With 2nd method number of iteration is: " 
+            + method2Iterations);
         }
 
         scanner.close();
@@ -50,7 +56,26 @@ private static PrimeResult checkPrimeMethod1(int number) {
 	        }
 	         return new PrimeResult(true, iterations);
 	            
-}	        	                
+}
+
+// checking for prime using primality algorithm
+private static PrimeResult checkPrimeMethod2(int number) {
+    int iterations = 0;
+    int b = number;
+    int x = number;
+    int i = 2;
+
+    while (x > 1 && i <= b) {
+        while (x % i == 0) {
+            iterations++;
+            x = x / i;
+            b = x;
+        }
+        i++;
+    }
+
+    return new PrimeResult(x == 1, iterations);
+}
 	        
 }
 
