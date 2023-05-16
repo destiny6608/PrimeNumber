@@ -18,7 +18,7 @@ The program implements two methods to check if a number is prime or composite:
 
 1. **Method I**: This method uses the regular calculation method. It divides every positive number between 2 and the given value (exclusive) to check for factors. The number of iterations required to find the factors is displayed.
 
-2. **Method II**: This method uses the algorithm mentioned in the online class. It iterates through the algorithm steps to determine if the number is prime or composite. However, this method is not implemented in the current program.
+2. **Method II**: This method uses the algorithm mentioned in the class. It iterates through the algorithm steps to determine if the number is prime or composite. However, this method is not implemented in the current program.
 
 ## Example
 
@@ -28,6 +28,8 @@ Please enter a number (enter 0 to exit): 12
 Number of iterations with Method I: 10
 Number of iterations with Method II: 1
 
-
+## Author
+ERIKPARA GBESIMI PETER
+STUDENT NUMBER 22217432
 
 
